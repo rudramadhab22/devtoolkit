@@ -1,4 +1,3 @@
-```gitignore
 # ==========================================
 # Operating System
 # ==========================================
@@ -40,12 +39,6 @@ hs_err_pid*
 replay_pid*
 javac.*.args
 
-# Maven Wrapper: KEEP these files tracked
-# mvnw
-# mvnw.cmd
-# .mvn/wrapper/maven-wrapper.jar
-# .mvn/wrapper/maven-wrapper.properties
-
 # ==========================================
 # Node.js / React / Vite
 # ==========================================
@@ -53,12 +46,30 @@ javac.*.args
 frontend/dist/
 frontend/.vite/
 frontend/coverage/
+frontend/test-results/
+frontend/playwright-report/
+frontend/.nyc_output/
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 lerna-debug.log*
 .npm/
 .pnpm-store/
+
+# ==========================================
+# Frontend Test Files
+# ==========================================
+frontend/**/*.test.js
+frontend/**/*.test.jsx
+frontend/**/*.test.ts
+frontend/**/*.test.tsx
+frontend/**/*.spec.js
+frontend/**/*.spec.jsx
+frontend/**/*.spec.ts
+frontend/**/*.spec.tsx
+frontend/src/__tests__/
+frontend/tests/
+frontend/test/
 
 # ==========================================
 # Environment Variables and Secrets
@@ -69,7 +80,7 @@ lerna-debug.log*
 !.env.sample
 !.env.template
 
-# Java / Spring environment-specific configuration
+# Local Spring Boot Configuration
 application-local.properties
 application-local.yml
 application-local.yaml
@@ -77,7 +88,7 @@ application-dev-local.properties
 application-dev-local.yml
 application-dev-local.yaml
 
-# Private keys and certificates
+# Private Keys and Certificates
 *.pem
 *.key
 *.p12
@@ -93,7 +104,7 @@ logs/
 log/
 
 # ==========================================
-# Test Results and Coverage
+# Backend Test Reports
 # ==========================================
 **/surefire-reports/
 **/failsafe-reports/
@@ -128,8 +139,10 @@ temp/
 .eslintcache
 .stylelintcache
 
+# Ignore frontend test files
+frontend/src/test/
+
 # ==========================================
-# Local Containers and Environment Overrides
 # ==========================================
 .env.docker
 docker-compose.override.yml
