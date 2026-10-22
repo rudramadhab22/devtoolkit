@@ -1,18 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ToolCard = ({ tool }) => {
   const Icon = tool.icon;
 
   return (
-    <div className="group flex flex-col h-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative">
-
-      {/* Coming Soon Badge */}
-      <div className="absolute top-4 right-4 z-10">
-        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-          Coming Phase 2
-        </span>
-      </div>
-
+    <Link
+      to={`/tools/${tool.id}`}
+      className="group flex flex-col h-full bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative"
+    >
       <div className="p-6 flex-grow">
         <div className="w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border border-gray-100 dark:border-gray-800">
           <Icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -37,13 +33,13 @@ const ToolCard = ({ tool }) => {
 
       <div className="px-6 py-4 bg-gray-50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-800 mt-auto">
         <span className="text-sm font-medium text-blue-600 dark:text-blue-400 flex items-center">
-          Explore Tool
+          Open Tool
           <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </span>
       </div>
-    </div>
+    </Link>
   );
 };
 
