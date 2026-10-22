@@ -1,0 +1,141 @@
+```gitignore
+# ==========================================
+# Operating System
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+.idea/
+.vscode/
+*.iml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Java / Maven / Spring Boot
+# ==========================================
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+javac.*.args
+
+# Maven Wrapper: KEEP these files tracked
+# mvnw
+# mvnw.cmd
+# .mvn/wrapper/maven-wrapper.jar
+# .mvn/wrapper/maven-wrapper.properties
+
+# ==========================================
+# Node.js / React / Vite
+# ==========================================
+**/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm/
+.pnpm-store/
+
+# ==========================================
+# Environment Variables and Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Java / Spring environment-specific configuration
+application-local.properties
+application-local.yml
+application-local.yaml
+application-dev-local.properties
+application-dev-local.yml
+application-dev-local.yaml
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+logs/
+log/
+
+# ==========================================
+# Test Results and Coverage
+# ==========================================
+**/surefire-reports/
+**/failsafe-reports/
+**/test-results/
+**/coverage/
+.nyc_output/
+
+# ==========================================
+# Temporary and Backup Files
+# ==========================================
+tmp/
+temp/
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+
+# ==========================================
+# Databases and Local Data
+# ==========================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ==========================================
+# Build and Tool Caches
+# ==========================================
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+.stylelintcache
+
+# ==========================================
+# Local Containers and Environment Overrides
+# ==========================================
+.env.docker
+docker-compose.override.yml
+compose.override.yml
+
+# ==========================================
+# Generated Documentation
+# ==========================================
+/site/

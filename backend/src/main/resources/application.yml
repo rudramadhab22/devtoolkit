@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: devtoolkit-backend
+  profiles:
+    active: dev
+
+app:
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:3000,http://localhost
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+logging:
+  level:
+    com.devtoolkit: DEBUG
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+logging:
+  level:
+    com.devtoolkit: INFO
